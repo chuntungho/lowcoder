@@ -12,6 +12,7 @@ on:
         - latest
         - test
         - 2.4.6
+        - 2.5.0-custom
       build_allinone:
         type: boolean
         description: 'Build the All-In-One image'
@@ -67,6 +68,7 @@ jobs:
       - name: Log into Docker Hub
         uses: docker/login-action@v3
         with:
+          registry: ${{ vars.DOCKER_REGISTRY }}
           username: ${{ secrets.DOCKER_LOGIN }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
