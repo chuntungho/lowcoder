@@ -16,19 +16,19 @@ on:
       build_allinone:
         type: boolean
         description: 'Build the All-In-One image'
-        default: true
+        default: false
       build_frontend:
         type: boolean
         description: 'Build the Frontend image'
-        default: true
+        default: false
       build_nodeservice:
         type: boolean
         description: 'Build the Node service image'
-        default: true
+        default: false
       build_apiservice:
         type: boolean
         description: 'Build the API service image'
-        default: true
+        default: false
   push:
     branches: dev
     paths:
